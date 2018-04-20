@@ -2,20 +2,16 @@
 
 <head>
     <title>PDV</title>
-    <meta charset="utf-8" />
+    <meta charset="utf8" />
 
     <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <style>
+     .principal{
+        margin-top: 20px;
+     }
+    </style>
 </head>
-
-<style>
-
-    .principal{
-        margin: 20px;
-    }
-
-
-
-</style>
 
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark static-top">
@@ -30,60 +26,57 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Produtos
                         <span class="sr-only">(current)</span>
-                    </a>                
-                </li>              
-            </ul>           
+                    </a>
+                </li>
+                
+            </ul>
+            
         </div>
     </nav>
+
     <div class="container principal">
         <div class="row">
-        <div class="col-md-4">
-                <div class="card">
-                        <div class="card-body">
+            <div class="col-md-4">
+                
+                <div class="card">                    
+                    <div class="card-body">
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1">#</span>
+                              <span class="input-group-text" id="basic-addon1">#</span>
                             </div>
-                                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-                            </div><!--fim do input-->
-                       
-                            <button type="button" class="btn btn-primary btn-block">Finalizar</button>                        
+                            <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">
+                            <div class="input-group-append">
+                                <button class="btn btn-info">+</button>
+                            </div>
+                        </div> <!-- fim do input-->
 
-                            <button type="button" class="btn btn-warning btn-block">Estornar</button>
+                        <button type="button" class="btn btn-primary btn-block">Finalizar</button>
+                        <button type="button" class="btn btn-warning btn-block">Estornar</button>
+                        <button type="button" class="btn btn-danger btn-block">Cancelar</button>
 
-                            <button type="button" class="btn btn-danger btn-block">Cancelar</button>
+                    </div>
+                </div><!-- fim do card-->
 
-                </div> <!--fim do card-->
             </div>
-            
-        </div>
 
-        <div class="col-md-8">
-            <div class="card bg-light mb-3">
-                <div class="card-header">Lista de Produtos</div>
-                <div class="card-body"> 
-                    <ol>
-                        <li>Produto nome -- Quant: 2 -- R$ 123,00</li>
-                        <li>Produto nome -- Quant: 2 -- R$ 123,00</li>
-                    </ol>                   
-            </div>
-            <div class="card-footer">
-                    Total a pagar XXX
-            </div>
-        </div>
-        <!--fim do card-->
-            
-
+            <div class="col-md-8">
+                <div class="card bg-light mb-3" >
+                    <div class="card-header">Lista de Produtos</div>
+                    <div class="card-body">
+                      <ol>
+                          <li>Produto nome -- Quant: 2 -- R$ 123,99</li>
+                          <li>Produto nome -- Quant: 2 -- R$ 123,99</li>
+                      </ol>
+                    </div>
+                    <div class="card-footer">
+                        Total a Pagar: xxxx
+                    </div>
+                  </div>
+            </div><!-- fim do card-->
 
         </div>
-
-
-
-
     </div>
 
-
-
-
 </body>
+
 </html>
