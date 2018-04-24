@@ -8,6 +8,8 @@
     <link href="webfonts/css/fontawesome-all.css" rel="stylesheet" />
 
     <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.js"></script>
     <script type="text/javascript" src="js/produtos.js"></script>
 
 
@@ -32,10 +34,8 @@
                     <a class="nav-link" href="#">Produtos
                         <span class="sr-only">(current)</span>
                     </a>
-                </li>
-                
-            </ul>
-            
+                </li>                
+            </ul>            
         </div>
     </nav>
 
@@ -46,7 +46,7 @@
             </div>
 
             <div class="col-md-10">
-            <a href="/produtos-novo.html" class="btn btn-success float-right">
+            <a href="#" class="btn btn-success float-right" data-toggle="modal" data-target="#novo-produto">
                  <i class="fas fa-plus"></i> Novo</a>
             </div>
                 <table class="table" id="lista-produtos">
@@ -59,25 +59,130 @@
                             <th>Ações</th>
                         </tr>
                     </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>123</td>
-                            <td>Bota Masculina</td>
-                            <td>Botas</td>
-                            <td>R$ 233,00</td>
-                            <td>
-                                <a href="/produtos-alterar.html" class="btn btn-primary" title="Editar"><i class="fas fa-edit"></i> </a>
-                                <a href="/produtos-deletar.html" class="btn btn-danger" title="Deletar"><i class="fas fa-minus-circle"></i> </a>
-                            </td>
-                        </tr>
+                    <tbody>                        
                     </tbody>
-
-
-                </table>
-           
+                </table>           
         </div>
     </div>
+
+<!--Deletar Modal-->
+    
+    <div class="modal fade" tabindex="-1" role="dialog" id="deletar-produto">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Deletar Produto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Você realmente deseja remover o produto?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+              <a href="/model/deleta-produto.php" class="btn btn-danger">Sim</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Novo produto Modal-->
+    <div class="modal fade" tabindex="-1" role="dialog" id="novo-produto">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Novo Produto</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+
+                        <form class="form-horizontal">
+                            <fieldset>                    
+                        
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="control-label" for="nome">Nome</label>
+                                    <div class="">
+                                        <input id="nome" name="nome" type="text" placeholder="" class="form-control input-md" required="">
+                                        <div class="invalid-feedback">Insira o nome ao produto</div>
+                                    </div>
+                                </div>
+                        
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="control-label" for="preco">Preço</label>
+                                    <div class="">
+                                        <input id="preco" name="preco" type="text" placeholder="" class="form-control input-md" required="">
+                        
+                                    </div>
+                                    <div class="invalid-feedback">Informe o valor unitário</div>
+                                </div>
+                        
+                                <!-- Select Basic -->
+                                <div class="form-group">
+                                    <label class="control-label" for="marca">Marca</label>
+                                    <div class="">
+                                        <select id="marca" name="marca" class="form-control">
+                                            <option value="0">-- Selecione --</option>
+                                            <option value="Caipira">Caipira</option>
+                                            <option value="DaRoça">DaRoça</option>
+                                            <option value="Nord">Nord</option>
+                                        </select>
+                                        <div class="invalid-feedback">Selecione a marca</div>
+                                    </div>
+                                </div>
+                        
+                                <!-- Select Basic -->
+                                <div class="form-group">
+                                    <label class=" control-label" for="categoria">Categoria</label>
+                                    <div class="">
+                                        <select id="categoria" name="categoria" class="form-control">
+                                            <option value="0">-- Selecione --</option>
+                                            <option value="Botas">Botas</option>
+                                            <option value="Social">Social</option>
+                                            <option value="Esporte">Esporte</option>
+                                        </select>
+                                        <div class="invalid-feedback">Selecione a categoria</div>
+                                    </div>
+                                </div>
+                        
+                                <!-- Multiple Radios -->
+                                <div class="form-group">
+                                    <label class=" control-label" for="sexo">Sexo</label>
+                                    <div class="">
+                                        <div class="radio">
+                                            <label for="sexo-0">
+                                                <input type="radio" name="sexo" id="sexo-0" value="Masculino"> Masculino
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label for="sexo-1">
+                                                <input type="radio" name="sexo" id="sexo-1" value="Feminino"> Feminino
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label for="sexo-2">
+                                                <input type="radio" name="sexo" id="sexo-2" value="Unisex"> Unisex
+                                            </label>
+                                        </div>
+                                        <div class="invalid-feedback">Selecione o sexo</div>
+                                    </div>
+                                </div>                    
+                        
+                            </fieldset>
+                        </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <a href="#" class="btn btn-success" id="salvar-produto">Salvar</a>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
 
 </body>
 
