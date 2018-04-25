@@ -17,6 +17,10 @@
      .principal{
         margin-top: 20px;
      }
+
+     .hide{
+         display: none;
+     }
     </style>
 </head>
 
@@ -81,7 +85,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
-              <a href="/model/deleta-produto.php" class="btn btn-danger">Sim</a>
+              <a href="/model/deleta-produto.php" id="btn-del" class="btn btn-danger">Sim</a>
             </div>
           </div>
         </div>
@@ -101,7 +105,8 @@
                 <div class="modal-body">
 
                         <form class="form-horizontal">
-                            <fieldset>                    
+                            <fieldset>
+                                <div class="alert alert-danger hide" id="msg-erro" role="alert">Erro</div>                    
                         
                                 <!-- Text input-->
                                 <div class="form-group">
@@ -110,18 +115,8 @@
                                         <input id="nome" name="nome" type="text" placeholder="" class="form-control input-md" required="">
                                         <div class="invalid-feedback">Insira o nome ao produto</div>
                                     </div>
-                                </div>
-                        
-                                <!-- Text input-->
-                                <div class="form-group">
-                                    <label class="control-label" for="preco">Preço</label>
-                                    <div class="">
-                                        <input id="preco" name="preco" type="text" placeholder="" class="form-control input-md" required="">
-                        
-                                    </div>
-                                    <div class="invalid-feedback">Informe o valor unitário</div>
-                                </div>
-                        
+                                </div>                      
+                                                        
                                 <!-- Select Basic -->
                                 <div class="form-group">
                                     <label class="control-label" for="marca">Marca</label>
@@ -171,14 +166,24 @@
                                         </div>
                                         <div class="invalid-feedback">Selecione o sexo</div>
                                     </div>
-                                </div>                    
+                                </div>
+                                
+                                <!-- Text input-->
+                                <div class="form-group">
+                                        <label class="control-label" for="preco">Preço</label>
+                                        <div class="">
+                                            <input id="preco" name="preco" type="text" placeholder="" class="form-control input-md" required="">
+                            
+                                        </div>
+                                        <div class="invalid-feedback">Informe o valor unitário</div>
+                                    </div>
                         
                             </fieldset>
                         </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <a href="#" class="btn btn-success" id="salvar-produto">Salvar</a>
+                            <button class="btn btn-success" id="salvar-produto">Salvar</button>
                         </div>
                         </div>
                         </div>
