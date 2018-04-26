@@ -4,15 +4,15 @@
     <title>PDV - Produtos</title>
     <meta charset="utf8" />
 
-    <link href="./css/bootstrap.css" rel="stylesheet" />
-    <link href="./webfonts/css/fontawesome-all.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="web-fonts/css/fontawesome-all.css" rel="stylesheet" />
 
-    <script type="text/javascript" src="./js/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="./js/bootstrap.js"></script>
-    <script type="text/javascript" src="./js/jquery.mask.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.js"></script>
 
 
-    <script type="text/javascript" src="./js/produtos.js"></script>
+    <script type="text/javascript" src="js/produtos.js"></script>
 
 
     <style>
@@ -54,7 +54,7 @@
             </div>
 
             <div class="col-md-2">
-                <button class="btn btn-success float-right" data-toggle="modal" id="btn-novo">
+                <button class="btn btn-success float-right" id="btn-novo">
                     <i class="fas fa-plus"></i>
                     Novo
                 </button>
@@ -64,9 +64,9 @@
                 <thead class="thead-light">
                     <tr>
                         <th>Id</th>
-                        <th>Nome</th>
-                        <th>Categoria</th>
-                        <th>Preço</th>
+                        <th><a href="#" class="btn-ord" coluna="nome">Nome</a></th>
+                        <th><a href="#" class="btn-ord" coluna="categoria">Categoria</a></th>
+                        <th><a href="#" class="btn-ord" coluna="preco">Preço</a></th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -168,17 +168,17 @@
                             <div class="">
                                 <div class="radio">
                                     <label for="sexo-0">
-                                        <input type="radio" name="sexo" id="sexo-0" value="M" checked=""> Masculino
+                                        <input type="radio" name="sexo" id="sexo-0" value="M"> Masculino
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label for="sexo-1">
-                                        <input type="radio" name="sexo" id="sexo-1" value="F" checked=""> Feminino
+                                        <input type="radio" name="sexo" id="sexo-1" value="F"> Feminino
                                     </label>
                                 </div>
                                 <div class="radio">
                                     <label for="sexo-2">
-                                        <input type="radio" name="sexo" id="sexo-2" value="U" checked=""> Unisex
+                                        <input type="radio" name="sexo" id="sexo-2" value="U"> Unisex
                                     </label>
                                 </div>
                                 <div class="invalid-feedback">
