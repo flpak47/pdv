@@ -88,7 +88,7 @@ $(function(){
         $("#novo-produto").modal('show');
         $('input[type=text]').val('');
         $('select').val(0);
-        $('input[type=radio]:checked').prop('checked', false)
+        $('input[type=radio]:checked').prop('checked', false);
 
         $("#salvar-produto").attr('tipo', 'novo');
 
@@ -96,7 +96,8 @@ $(function(){
 
     $('.btn-ord').click(function(){
         listarProdutos($(this).attr('coluna'));
-    });
+    }); //fim do click
+
 
 });
 
@@ -111,10 +112,8 @@ function listarProdutos(coluna){
                     +'<td>'+ el.nome +'</td>'
                     +'<td>'+ el.categoria +'</td>'
                     +'<td>R$ '+ el.preco +'</td>'
-                    +'<td> '                    
+                    +'<td> '
                         +'<button class="btn btn-primary btn-editar-produto" title="Editar"><i class="fas fa-edit"></i></button>'
-                        +'&nbsp'
-                        +'&nbsp'
                         +'<button class="btn btn-danger btn-deletar-produto"  title="Deletar"><i class="fas fa-minus-circle"></i></button>'
                     +'</td>'
                 +'</tr>';
